@@ -13,6 +13,25 @@ from pyngrok import ngrok
 
 logger = logging.getLogger("uvicorn.error")
 
+import os
+
+# Get the folder where this script is located
+BASE_DIR = os.path.dirname(__file__)
+
+
+
+# Combine with your model filename
+MODEL_PATH = os.path.join(BASE_DIR, "Fake_news.sav")
+
+VECTOR_PATH = os.path.join(BASE_DIR, "vector.sav")
+
+# Load the model
+with open(MODEL_PATH, "rb") as f:
+    model = pickle.load(f)
+
+with open(VECTOR_PATH, "rb") as f:
+    vector = pickle.load(f)
+
 app = FastAPI()
 
 class Input(BaseModel):
@@ -45,4 +64,5 @@ if __name__ == "__main__":
     # Start ngrok tunnel for public URL
     public_url = ngrok.connect(8000)
     print(f"Public URL: {public_url}")
+
     uvicorn.run(app, port=8000)
