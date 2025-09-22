@@ -38,11 +38,6 @@ class Input(BaseModel):
     combine: str
 
 
-# Load the model and vectorizer
-model= pickle.load(open("C:/Users/HP/Projects For Job/Fake_news.sav", 'rb'))
-vector = pickle.load(open("C:/Users/HP/Projects For Job/vector.sav", "rb"))
-
-
 #Creating the API endpoint
 @app.post("/predict")   
 
@@ -66,3 +61,4 @@ if __name__ == "__main__":
     print(f"Public URL: {public_url}")
 
     uvicorn.run(app, port=8000)
+
