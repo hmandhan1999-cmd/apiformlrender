@@ -71,7 +71,6 @@ pandas==2.3.1
 pandocfilters==1.5.1
 parso==0.8.4
 pillow==11.3.0
-pickle
 platformdirs==4.3.8
 prometheus_client==0.22.1
 prompt_toolkit==3.0.51
@@ -123,3 +122,4 @@ webencodings==0.5.1
 websocket-client==1.8.0
 wheel==0.45.1
 widgetsnbextension==4.0.14
+
