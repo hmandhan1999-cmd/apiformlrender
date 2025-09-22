@@ -81,6 +81,7 @@ pyarrow==21.0.0
 pycparser==2.22
 pydeck==0.9.1
 pydantic
+pyngrok
 Pygments==2.19.2
 python-dateutil==2.9.0.post0
 python-json-logger==3.3.0
@@ -122,4 +123,5 @@ webencodings==0.5.1
 websocket-client==1.8.0
 wheel==0.45.1
 widgetsnbextension==4.0.14
+
 
